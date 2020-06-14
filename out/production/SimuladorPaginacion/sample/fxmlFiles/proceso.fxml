@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.ComboBox?>
+<SplitPane dividerPositions="0.3" prefHeight="700" prefWidth="1000" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.ProcesoController">
+  <items>
+      <GridPane alignment="CENTER" hgap="10" vgap="10">
+          <Button fx:id="btnGenerarProceso" prefWidth="100.0" text="GenerarProceso" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="0" />
+          <TextField fx:id="txtProceso" prefWidth="100" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="0"/>
+          <Button fx:id="btnSacarProceso" prefWidth="100.0" text="SacarProceso" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
+          <ComboBox fx:id="comboSacarProceso" prefWidth="100.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
+          <Label text="Swapping" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+          <TextArea fx:id="txtAreaSwapp" prefHeight="181.0" prefWidth="179.0" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4"/>
+          <Label fx:id="lblFragmentacion" text="Fragmentación = 0%" textAlignment="LEFT" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="6"/>
+          <Button fx:id="btnSalir" text="Terminar y Regresar" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+      </GridPane>
+      <VBox alignment="CENTER" spacing="20">
+        <Label alignment="CENTER" text="PAGINACIÓN MEMORIA RAM" />
+        <ScrollPane prefWidth="480.0" minWidth="480" maxWidth="480">
+         <GridPane fx:id="tabla" alignment="CENTER">
+              <Label prefWidth="80" text="PAGINA" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" textAlignment="CENTER" alignment="CENTER"/>
+              <Label prefWidth="80" text="MARCO" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" textAlignment="CENTER" alignment="CENTER"/>
+              <Label prefWidth="80" text="PID" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="0" textAlignment="CENTER" alignment="CENTER"/>
+              <Label prefWidth="80" text="TAMAÑO" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="0" textAlignment="CENTER" alignment="CENTER"/>
+              <Label prefWidth="80" text="EN USO" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="0" textAlignment="CENTER" alignment="CENTER"/>
+              <Label prefWidth="80" text="LIBRE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="0" textAlignment="CENTER" alignment="CENTER"/>
+         </GridPane>
+        </ScrollPane>
+      </VBox>
+  </items>
+</SplitPane>

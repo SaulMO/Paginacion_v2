@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.controllers.MainController"
+            prefHeight="400.0" prefWidth="600.0" hgap="10" vgap="10"
+            alignment="CENTER">
+
+    <Label text="Configuración Memoria" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+
+    <Label text="Tamaño Memoria k's" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <TextField fx:id="textFieldTamano" prefHeight="25.0" prefWidth="71.0" promptText="k's" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+    <Label text="N° Páginas" prefHeight="25.0" prefWidth="71.0" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <ComboBox fx:id="comboBoxPaginas" prefHeight="25.0" prefWidth="71.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+    <Label text="Marcos" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <ComboBox fx:id="comboBoxMarcos" prefHeight="25.0" prefWidth="71.0" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+
+    <Button fx:id="btnStart" text="Empezar" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="5"/>
+</GridPane>
